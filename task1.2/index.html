@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мой сайт</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <header>
+      <div class="topHead">
+        <div class="logo">
+          <img src="logo.png" alt="Logo" />
+        </div>
+
+        <div class="user-info" id="userName">
+          <p>Группа: "ЭФБО-09-23"</p>
+          <p>Журавлев Дмитрий Андреевич</p>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Первый семестр</a></li>
+          <li><a href="#">Второй семестр</a></li>
+          <li><a href="#">Услуги</a></li>
+          <li><a href="#">Авторизация</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="NavBar2">
+        <h2>Навигация по странице</h2>
+        <ul>
+          <li><a href="#">Фронтенд</a></li>
+          <li><a href="#">Бекенд</a></li>
+          <li  onclick="toggleText()"><a href="#">Разработка веб-приложений</a></li>
+
+        </ul>
+      </div>
+
+
+
+
+
+
+
+      <div id="text-content" class="Text">
+        <div class="Profiling">
+<div>
+<h1>Добро пожаловать на мой сайт</h1>
+<p>Меня зовут Журавлев Дмитрий Андреевич и я начинающий
+    специалист по веб-разработке.
+    </p>
+
+</div>
+
+
+<img src="profile.png" alt="profileImg"/>
+
+
+</div>
+<h1>Фронтенд</h1>
+<h2>Фронтенд (или клиентская часть) - это то, что видит пользователь. Он включает в себя все визуальные элементы веб-сайта или приложения: кнопки, формы, изображения и текст. Фронтенд разработчики используют языки разметки и стилизации, такие как HTML, CSS и JavaScript, чтобы создавать
+    интерактивные и привлекательные интерфейсы. Основная задача фронтенда
+    — обеспечить удобство использования и эстетическую привлекательность.</h2>
+<h1>Бэкенд</h1>
+<h2>Бэкенд (или серверная часть) — это "за кулисами" веб-приложения. Он отвечает за обработку данных, управление пользователями и взаимодействие с базами данных. Бэкенд разработчики используют языки программирования, такие как Python, Ruby, Java или РНР, а также фреймворки и базы данных для создания логики приложения. Основная задача бэкенда - обеспечить
+    стабильную работу приложения и безопасность данных.</h2>
+
+      </div>
+    </main>
+
+    <script>
+        let isOriginal = true;
+
+        function toggleText() {
+          const textDiv = document.getElementById('text-content');
+          if (isOriginal) {
+            textDiv.innerHTML = `
+              <div class="SecondText">
+                <h1>Разработка веб-приложений</h1>
+                <div class='images'>
+                    <div class='imageCont'>
+                    <img src='image.png' alt='image2'/>
+                    <p>Сайт-визитка</p>
+                    <button onclick="openModal()"  name="ord" value="Заказать"> Заказать</button>
+                    </div>
+                     <div class='imageCont'>
+                    <img src='image.png' alt='image2'/>
+                    <p>Корпоративный сайт</p>
+                    <button onclick="openModal()" name="ord" value="Заказать"> Заказать</button>
+                    </div>
+                     <div class='imageCont'>
+                    <img src='image.png' alt='image2'/>
+                    <p>Интернет-магазин</p>
+                    <button onclick="openModal()" name="ord" value="Заказать"> Заказать</button>
+                    </div>
+
+                    </div>
+                    <p>???</p>
+              </div>
+            `;
+          } else {
+            textDiv.innerHTML = `
+
+                <div class="Profiling">
+                  <div>
+                    <h1>Добро пожаловать на мой сайт</h1>
+                    <p>Меня зовут Журавлев Дмитрий Андреевич и я начинающий
+                        специалист по веб-разработке.</p>
+                  </div>
+                  <img src="profile.png" alt="profileImg"/>
+                </div>
+                <h1>Фронтенд</h1>
+                <h2>Фронтенд (или клиентская часть) - это то, что видит пользователь. Он включает в себя все визуальные элементы веб-сайта или приложения: кнопки, формы, изображения и текст. Фронтенд разработчики используют языки разметки и стилизации, такие как HTML, CSS и JavaScript, чтобы создавать
+интерактивные и привлекательные интерфейсы. Основная задача фронтенда
+— обеспечить удобство использования и эстетическую привлекательность.</h2>
+                <h1>Бэкенд</h1>
+                <h2>Фронтенд (или клиентская часть) - это то, что видит пользователь. Он включает в себя все визуальные элементы веб-сайта или приложения: кнопки, формы, изображения и текст. Фронтенд разработчики используют языки разметки и стилизации, такие как HTML, CSS и JavaScript, чтобы создавать
+интерактивные и привлекательные интерфейсы. Основная задача фронтенда
+— обеспечить удобство использования и эстетическую привлекательность.</h2>
+
+            `;
+          }
+          isOriginal = !isOriginal;
+        }
+
+        function openModal() {
+          document.getElementById('modalForm').style.display = 'flex';
+        }
+
+        function closeModal() {
+          document.getElementById('modalForm').style.display = 'none';
+        }
+      </script>
+
+    <footer>
+      <p>© Журавлев Дмитрий Андреевич, 2024</p>
+      <div class="vkLogo">
+        <img src="vkLogo.png" alt="vk" />
+      </div>
+      <div class="whtLogo">
+        <img src="whtLogo.png" alt="wht" />
+      </div>
+    </footer>
+
+    <div class="modal" id="modalForm">
+      <div class="modal-content" id="modalContent">
+        <span class="close" id="cross" onclick="closeModal()">&times;</span>
+        <form id="orderForm">
+          <h2>Заполните форму</h2>
+          <label for="name">Как вас зовут:</label>
+          <input type="text" id="name" placeholder="Введите ваше имя" required>
+
+          <label for="email">Ваш e-mail:</label>
+          <input type="email" id="email" placeholder="test@mail.ru" required>
+
+          <label for="phone">Телефон:</label>
+          <input type="tel" id="phone" placeholder="+7 999 999 99 99" required>
+
+          <label for="country">Страна:</label>
+          <select id="country" required>
+            <option value="Россия">Россия</option>
+            <option value="Казахстан">Казахстан</option>
+            <option value="Беларусь">Беларусь</option>
+          </select>
+
+          <label for="date">Дата:</label>
+          <input type="date" id="date" required>
+
+          <label for="comment">Комментарий:</label>
+          <textarea id="comment" rows="4" placeholder="Ваш комментарий"></textarea>
+
+          <div id="agreeDiv">
+            <label for="agree">Согласен на обработку моих персональных данных</label>
+            <input type="checkbox" id="agree" required>
+          </div>
+          <br><br>
+          <button type="submit">Отправить заявку</button>
+        </form>
+        <div id="successMessage" class="success"></div>
+      </div>
+    </div>
+  </body>
+</html>
